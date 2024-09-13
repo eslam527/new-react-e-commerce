@@ -8,8 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+<<<<<<< HEAD
     "predepoly":"npm run build",
     "depoly":"gh-pages -d dist",
+=======
+>>>>>>> 4bd04e17803f649796db74775bc7235f22ecff85
     "preview": "vite preview"
   },
   "dependencies": {
