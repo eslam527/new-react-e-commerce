@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+ import React, { useContext, useEffect, useState } from 'react'
 import style from './Register.module.css'
 import { useFormik } from 'formik'
 import *as yup from 'yup'
@@ -75,7 +75,7 @@ useEffect(()=>{
     name: yup.string().min(3, 'min char is 3').max(15, 'the max char is 15').required('name is requird'),
     email: yup.string().email('emaile is valid').required('email is requird'),
     // في سؤال
-    password: yup.string().matches(/^[A-Z]\w{4,10}$/, 'password be like this Ahmed@123').required('pasword is requird'),
+    password: yup.string().matches(/^[A-Z]\w.{4,10}$/, 'password be like this Ahmed@123').required('pasword is requird'),
     rePassword: yup.string().oneOf([yup.ref('password')], 'rePassword & password not matching').required('rePassword is requird'),
     phone: yup.string().matches(/^(002)?01[0125][0-9]{8}$/, 'enter egyption number').required('phon is requird'),
   })
@@ -88,12 +88,8 @@ useEffect(()=>{
       rePassword: "",
       phone: ""
 
-    },
-
-    // custom vatidation 
-    // validate: validateForm
-    validationSchema: validationSchema
-    , onSubmit: handelRegister
+    },validationSchema: validationSchema
+    ,onSubmit: handelRegister
   })
 
 

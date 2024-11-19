@@ -8,11 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-<<<<<<< HEAD
     "predepoly":"npm run build",
     "depoly":"gh-pages -d dist",
-=======
->>>>>>> 4bd04e17803f649796db74775bc7235f22ecff85
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +18,7 @@
     "axios": "^1.7.3",
     "formik": "^2.4.6",
     "generate-react-cli": "^8.4.8",
+    "gh-pages": "^6.1.1",
     "git-add": "^0.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

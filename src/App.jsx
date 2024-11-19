@@ -7,13 +7,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
 import Cart from './components/cart/cart.jsx'
 import Products from './components/products/products.jsx'
-import Catogries from './components/catogries/catogries.jsx'
-import Brands from './components/brands/brands.jsx'
+import Catogries from './components/Catogries/catogries.jsx'
+import Brands from './components/brands/Brands.jsx'
 import Register from './components/Register/Register.jsx'
 import LogIn from './components/LogIn/LogIn.jsx'
 import NotFound from './components/NotFound/NotFound.jsx'
 import LayOut from './components/LayOut/LayOut.jsx'
-import CounterContextProvider from './components/context/counterContext.jsx'
 import UserContextProvider from './components/context/UserContext.jsx'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx'
 import ProductDetils from './components/ProductDetils/ProductDetils.jsx'
@@ -60,10 +59,8 @@ export default function App() {
 
         <CartContextProvider>
           <UserContextProvider>
-            <CounterContextProvider>
               <RouterProvider router={routers}></RouterProvider>
               <Toaster />
-            </CounterContextProvider>
           </UserContextProvider>
         </CartContextProvider>
       </WishListContextProvider>
